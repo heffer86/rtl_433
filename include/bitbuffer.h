@@ -15,7 +15,7 @@
 #include <stdint.h>
 
 // NOTE: Wireless mbus protocol needs at least ((256+16*2+3)*12)/8 => 437 bytes
-#define BITBUF_COLS 450 // Number of bytes in a column
+#define BITBUF_COLS 2048 // Number of bytes in a column FIXME: not for merge!
 #define BITBUF_ROWS 25
 #define BITBUF_MAX_PRINT_BITS 50 // Maximum number of bits to print (in addition to hex values)
 
@@ -68,10 +68,6 @@ void bitrow_print(uint8_t const *bitrow, unsigned bit_len);
 
 /// Debug the content of a bit row (byte buffer).
 void bitrow_debug(uint8_t const *bitrow, unsigned bit_len);
-
-/// Print the content of a bit row (byte buffer) to a string buffer.
-/// The output is always null-terminated, unless size is 0.
-int bitrow_snprint(uint8_t const *bitrow, unsigned bit_len, char *str, unsigned size);
 
 /// Parse a string into a bitbuffer.
 void bitbuffer_parse(bitbuffer_t *bits, const char *code);

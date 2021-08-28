@@ -194,10 +194,7 @@
     DECL(auriol_aft77b2) \
     DECL(honeywell_cm921) \
     DECL(tpms_hyundai_vdo) \
-    DECL(rojaflex) \
-    DECL(marlec_solar) \
-    DECL(somfy_iohc) \
-    DECL(fineoffset_wh31l) \
+    DECL(inkbird_ith20r) \
 
     /* Add new decoders here. */
 
